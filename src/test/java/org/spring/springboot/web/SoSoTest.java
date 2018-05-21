@@ -219,6 +219,8 @@ public class SoSoTest {
     /**
      询价,18800000000,询价西藏林芝的众泰
      */
+
+    /**
     @Test
     public void sendAskPriceTest() {
         Map<String,Object> paramMap = new HashMap<String, Object>();
@@ -246,7 +248,7 @@ public class SoSoTest {
         response.print();
         response.getStatusCode();
     }
-
+     */
     /**
      * 登录15101079917,然后退出登录
      */

@@ -79,34 +79,34 @@ public class AskPriceTest {
     /**
      情景一: 询价,15101079917,询价西藏林芝的众泰,应该提示"不支持对所属经销商的品牌询价"
      */
-    @Test
-    public void sendAskPriceTest1() {
-        Map<String,Object> paramMap = new HashMap<String, Object>();
-        paramMap.put("access_token","RnmfaOzMKQWg4Dd5IgkHTM1HJSFIEIIc2YC3aWk4");
-        paramMap.put("city_id","2807");
-        paramMap.put("model_id","39256");
-//        paramMap.put("buyer_name","怎么了先生");
-        paramMap.put("buyer_mobile","15101079917");
-        paramMap.put("extra_selections","");
-//        paramMap.put("device","iphone");
-//        paramMap.put("device_token","6954ea5b5dab1bdde9c92aeb195ac836c4a873d4c08428ae812e474f979e0639");
-
-        Map<String,Object> headerMap = new HashMap<String, Object>();
-        headerMap.put("Host", host);
-        headerMap.put("Accept", "application/vnd.sosocar.v6.9+json");
-        headerMap.put("Accept-Language", "zh-cn");
-        headerMap.put("appid", "sosocar.topdeals");
-
-        Response response = given().log().all()
-                .contentType("application/x-www-form-urlencoded; charset=utf-8")
-                .headers(headerMap)
-                .params(paramMap)
-                .post("http://api.sosocar.cn/topdeals/ask-prices/send-ask-price/");
-
-        response.print();
-        response.getStatusCode();
-        response.then().body("message", is("不支持对所属经销商的品牌询价"));
-    }
+//    @Test
+//    public void sendAskPriceTest1() {
+//        Map<String,Object> paramMap = new HashMap<String, Object>();
+//        paramMap.put("access_token","RnmfaOzMKQWg4Dd5IgkHTM1HJSFIEIIc2YC3aWk4");
+//        paramMap.put("city_id","2807");
+//        paramMap.put("model_id","39256");
+////        paramMap.put("buyer_name","怎么了先生");
+//        paramMap.put("buyer_mobile","15101079917");
+//        paramMap.put("extra_selections","");
+////        paramMap.put("device","iphone");
+////        paramMap.put("device_token","6954ea5b5dab1bdde9c92aeb195ac836c4a873d4c08428ae812e474f979e0639");
+//
+//        Map<String,Object> headerMap = new HashMap<String, Object>();
+//        headerMap.put("Host", host);
+//        headerMap.put("Accept", "application/vnd.sosocar.v6.9+json");
+//        headerMap.put("Accept-Language", "zh-cn");
+//        headerMap.put("appid", "sosocar.topdeals");
+//
+//        Response response = given().log().all()
+//                .contentType("application/x-www-form-urlencoded; charset=utf-8")
+//                .headers(headerMap)
+//                .params(paramMap)
+//                .post("http://api.sosocar.cn/topdeals/ask-prices/send-ask-price/");
+//
+//        response.print();
+//        response.getStatusCode();
+//        response.then().body("message", is("不支持对所属经销商的品牌询价"));
+//    }
 
     /**
      情景二: 询价,18800000000,询价西藏日喀则的众泰,应该提示"您询价的城市目前还没有该车型的经销商，您可以向邻近城市"
@@ -144,34 +144,34 @@ public class AskPriceTest {
     /**
      情景三: 询价,18800000000,询价西藏林芝的众泰,应该提示"等待报价"
      */
-    @Test
-    public void sendAskPriceTest3() {
-        Map<String,Object> paramMap = new HashMap<String, Object>();
-        paramMap.put("access_token","RnmfaOzMKQWg4Dd5IgkHTM1HJSFIEIIc2YC3aWk4");
-        paramMap.put("city_id","2769");
-        paramMap.put("model_id","39256");
-//        paramMap.put("buyer_name","怎么了先生");
-        paramMap.put("buyer_mobile","18800000000");
-        paramMap.put("extra_selections","");
-//        paramMap.put("device","iphone");
-//        paramMap.put("device_token","6954ea5b5dab1bdde9c92aeb195ac836c4a873d4c08428ae812e474f979e0639");
-
-        Map<String,Object> headerMap = new HashMap<String, Object>();
-        headerMap.put("Host", "api.sosocar.cn");
-        headerMap.put("Accept", "application/vnd.sosocar.v6.9+json");
-        headerMap.put("Accept-Language", "zh-cn");
-        headerMap.put("appid", "sosocar.topdeals");
-
-        Response response = given().log().all()
-                .contentType("application/x-www-form-urlencoded; charset=utf-8")
-                .headers(headerMap)
-                .params(paramMap)
-                .post("http://api.sosocar.cn/topdeals/ask-prices/send-ask-price/");
-
-        response.print();
-        response.getStatusCode();
-        response.then().body("message", is("等待报价"));
-    }
+//    @Test
+//    public void sendAskPriceTest3() {
+//        Map<String,Object> paramMap = new HashMap<String, Object>();
+//        paramMap.put("access_token","RnmfaOzMKQWg4Dd5IgkHTM1HJSFIEIIc2YC3aWk4");
+//        paramMap.put("city_id","2769");
+//        paramMap.put("model_id","39256");
+////        paramMap.put("buyer_name","怎么了先生");
+//        paramMap.put("buyer_mobile","18800000000");
+//        paramMap.put("extra_selections","");
+////        paramMap.put("device","iphone");
+////        paramMap.put("device_token","6954ea5b5dab1bdde9c92aeb195ac836c4a873d4c08428ae812e474f979e0639");
+//
+//        Map<String,Object> headerMap = new HashMap<String, Object>();
+//        headerMap.put("Host", "api.sosocar.cn");
+//        headerMap.put("Accept", "application/vnd.sosocar.v6.9+json");
+//        headerMap.put("Accept-Language", "zh-cn");
+//        headerMap.put("appid", "sosocar.topdeals");
+//
+//        Response response = given().log().all()
+//                .contentType("application/x-www-form-urlencoded; charset=utf-8")
+//                .headers(headerMap)
+//                .params(paramMap)
+//                .post("http://api.sosocar.cn/topdeals/ask-prices/send-ask-price/");
+//
+//        response.print();
+//        response.getStatusCode();
+//        response.then().body("message", is("等待报价"));
+//    }
 
     /**
      URL情况一: 不给model_id,应该提示:Incorrect parameter

@@ -77,14 +77,14 @@ public class SecondCar {
         response.print();
         response.getStatusCode();
         response.then().statusCode(200)
-            .body("data.future_prices[0].month",equalTo("2018.04"))
-            .body("data.future_prices.month",hasItem("2018.10"))
+            .body("data.future_prices[0].month",equalTo("2018.05"))
+            .body("data.future_prices.month",hasItem("2018.11"))
                 //[-1]数组的最后一个元素
-            .body("data.future_prices[-1].month",equalTo("2019.04"))
+            .body("data.future_prices[-1].month",equalTo("2019.05"))
                 //findALl 查出来的是一个数组,要用hasItem
-            .body("data.future_prices.findAll {future_prices->future_prices.month == '2018.10'}.price",hasItem("14.61"))
+            .body("data.future_prices.findAll {future_prices->future_prices.month == '2018.11'}.price",hasItem("14.30"))
                 //find是查找某一个,用equalTo
-            .body("data.future_prices.find {future_prices->future_prices.month == '2018.10'}.price",equalTo("14.61"))
+            .body("data.future_prices.find {future_prices->future_prices.month == '2018.11'}.price",equalTo("14.30"))
                 //判断数组的数量使用.size()
             .body("data.future_prices.size()",equalTo(5))
 
