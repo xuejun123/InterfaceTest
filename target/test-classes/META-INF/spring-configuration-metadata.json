@@ -1,0 +1,16 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "org.spring.springboot.web.property.ConfigProperties",
+      "name": "",
+      "type": "org.spring.springboot.web.property.ConfigProperties"
+    },
+    {
+      "sourceType": "org.spring.springboot.web.AskPriceTest",
+      "name": "connection",
+      "type": "org.spring.springboot.web.AskPriceTest"
+    }
+  ],
+  "properties": []
+}

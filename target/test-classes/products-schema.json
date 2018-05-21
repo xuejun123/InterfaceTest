@@ -1,0 +1,96 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "properties": {
+    "result": {
+      "$id": "/properties/result",
+      "type": "boolean",
+      "title": "The Result Schema ",
+      "default": false,
+      "examples": [
+        true
+      ]
+    },
+    "data": {
+      "$id": "/properties/data",
+      "type": "array",
+      "items": {
+        "$id": "/properties/data/items",
+        "type": "object",
+        "properties": {
+          "rank": {
+            "$id": "/properties/data/items/properties/rank",
+            "type": "integer",
+            "title": "The Rank Schema ",
+            "default": 0,
+            "examples": [
+              1
+            ]
+          },
+          "id": {
+            "$id": "/properties/data/items/properties/id",
+            "type": "integer",
+            "title": "The Id Schema ",
+            "default": 0,
+            "examples": [
+              5149
+            ]
+          },
+          "name": {
+            "$id": "/properties/data/items/properties/name",
+            "type": "string",
+            "title": "The Name Schema ",
+            "default": "",
+            "examples": [
+              "宝骏510"
+            ]
+          },
+          "url": {
+            "$id": "/properties/data/items/properties/url",
+            "type": "string",
+            "title": "The Url Schema ",
+            "default": "",
+            "examples": [
+              "topexpert://series/?ak=42wsf4axd&chn=1&series_id=5149"
+            ]
+          },
+          "pic": {
+            "$id": "/properties/data/items/properties/pic",
+            "type": "string",
+            "title": "The Pic Schema ",
+            "default": "",
+            "examples": [
+              "http://s0.topkacdn.cn/upload/images/series/20170413/vrw758eef79db4f30.png"
+            ]
+          },
+          "price": {
+            "$id": "/properties/data/items/properties/price",
+            "type": "string",
+            "title": "The Price Schema ",
+            "default": "",
+            "examples": [
+              "5.48-7.68万"
+            ]
+          },
+          "month": {
+            "$id": "/properties/data/items/properties/month",
+            "type": "string",
+            "title": "The Month Schema ",
+            "default": "",
+            "examples": [
+              "2018年2月"
+            ]
+          },
+          "number": {
+            "$id": "/properties/data/items/properties/number",
+            "type": "integer",
+            "title": "The Number Schema ",
+            "default": 0,
+            "examples": [
+              33545
+            ]
+          }
+        }
+      }
+    }
+  }
+}
